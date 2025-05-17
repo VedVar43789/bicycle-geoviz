@@ -8,3 +8,30 @@ body {
   margin: auto;
   padding: 1em;
 }
+
+header {
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+  margin-bottom: 1em;
+}
+
+label {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.9em;
+}
+
+/* #time-display,
+#any-time-label {
+  display: block;
+  margin-top: 0.25em;
+}
+
+#any-time-label {
+  color: #888;
+  font-style: italic;
+} */
+

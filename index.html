@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bikewatching</title>
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="map.css" />
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-
-    <!-- Map script -->
-    <script src="map.js" type="module"></script>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bikewatching</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="map.css" />
+  <link
+    href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <!-- Map script -->
+  <script src="map.js" type="module"></script>
+</head>
+<body>
+  <header>
     <h1>🚴🏼‍♂️ Bikewatching</h1>
-    <p>A web app for observing and tracking bikes in urban environments.</p>
+    <label>
+      Filter by time:
+      <input type="range" id="time-slider" min="-1" max="1439" value="-1">
+      <time id="selected-time"></time>
+      <em id="any-time">(any time)</em>
+    </label>
+  </header>
+  <p>A web app for observing and tracking bikes in urban environments.</p>
+  <!-- Map container -->
+  <div id="map">
+    <svg></svg>
+  </div>
 
-    <!-- Map container -->
-    <div id="map"></div>
-  </body>
+  <div class="legend">
+  <div style="--departure-ratio: 1; text-align: left;">More departures</div>
+  <div style="--departure-ratio: 0.5; text-align: center;">Balanced</div>
+  <div style="--departure-ratio: 0; text-align: right;">More arrivals</div>
+</div>
+
+
+</body>
 </html>
